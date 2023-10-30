@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+
+    <parameter name="id" value="0" />
+    <parameter name="dataprovider" value="data.csv" />
+    <parameter name="nametest" value="Consumo HN" />
+
+    <test thread-count="3" name="Ideal">
+
+        <groups>
+            <define name="Ideal">
+                <!-- HOME -->
+                <include name="validateMountQuote" />
+                <include name="validateFaceBookLink" />
+            </define>
+
+            <run>
+                <include name="Ideal" />
+            </run>
+
+            <dependencies>
+
+                <!-- HEADER -->
+                <group name="validateFaceBookLink" depends-on="validateMountQuote" />
+
+            </dependencies>
+
+        </groups>
+        <classes>
+            <class name="test.Home.HomeTest" />
+        </classes>
+    </test>
+</suite>

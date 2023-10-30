@@ -1,0 +1,4 @@
+base\BasePage.class
+page\Home\HomePage.class
+entity\UserProfile.class
+browserStack\BrowserStackConnection.class

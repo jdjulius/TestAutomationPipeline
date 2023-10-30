@@ -1,0 +1,15 @@
+{
+    "user": "juliodavidvelasq_rTIO7o",
+    "key": "xkW2sy1zMERZx8jryr43",
+    "server": "hub.browserstack.com",
+    "browserName": "Chrome",
+    "bstack:options": {
+      "os": "Windows",
+      "osVersion": "11",
+      "browserVersion": "115.0",
+      "projectName": "TDCHN",
+      "local": "false",
+      "seleniumVersion": "4.4.0",
+      "buildName": "TestAutomationPipeline"
+ }
+}

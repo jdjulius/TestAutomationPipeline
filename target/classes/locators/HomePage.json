@@ -1,0 +1,44 @@
+{
+    "locator": [
+        {
+            "name": "fbPath",
+            "type": "component",
+            "locatorType": "xpath",
+            "locator": "/html/body/app-root/app-general-layout/div/app-footer/footer/div/div[2]/ul/li[1]/a"
+        },
+        {
+            "name": "offerPath",
+            "type": "input",
+            "locatorType": "xpath",
+            "locator": "/html/body/app-root/app-general-layout/div/div/app-home/app-calculator/div/section/app-calculator-input/article/input",
+            "attributes": [
+                {
+                    "name": "min",
+                    "value": "5"
+                },
+                {
+                    "name": "max",
+                    "value": "6"
+                },
+                {
+                    "name": "ascii",
+                    "value": "*-/-+"
+                },
+                {
+                    "name": "errorxpath",
+                    "value": ""
+                },
+                {
+                    "name": "required",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "name": "volverCotizar",
+            "type": "button",
+            "locatorType": "xpath",
+            "locator": "/html/body/app-root/app-general-layout/div/div/app-home/app-sticky-header/header/div/div/button"
+        }
+    ]
+}
