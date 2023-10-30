@@ -6,7 +6,7 @@
     <parameter name="dataprovider" value="data.csv" />
     <parameter name="nametest" value="Consumo HN" />
 
-    <test thread-count="3" name="Ideal">
+    <test thread-count="3" name="Ideall">
 
         <groups>
             <define name="Ideal">

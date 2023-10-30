@@ -2,9 +2,6 @@ package base;
 
 import java.util.List;
 import java.util.Properties;
-
-import org.openqa.selenium.HasAuthentication;
-import org.openqa.selenium.UsernameAndPassword;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,8 +9,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
-
-import browserStack.BrowserStackConnection;
 import entity.UserProfile;
 
 
@@ -30,6 +25,10 @@ public class BaseTest {
     @Parameters({ "id", "dataprovider", "nametest" })
     private void setUp(@Optional int id, @Optional String dataprovider, @Optional String nametest) throws Exception {
 
+
+        System.out.println("inicio");
+
+
        // configFileName = Routes.currentWorkingDirectory + Routes.fileNameConfig;
        // configProperty = ConfigUtils.readProperties(configFileName);
 
@@ -40,15 +39,15 @@ public class BaseTest {
         // driver = connection.initBrowserStack(configProperty.getProperty("BWCONFIG"),
         // nametest);
 
-       // System.setProperty("webdriver.chrome.driver", Routes.currentWorkingDirectory + Routes.driverChrome);
+       //System.setProperty("webdriver.chrome.driver", Routes.currentWorkingDirectory + Routes.driverChrome);
         ChromeOptions co = new ChromeOptions();
         co.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(co);
 
         //Wait.sleep(2);
 
-        String usr = configProperty.getProperty("USER");
-        String pwd = configProperty.getProperty("PASS");
+        //String usr = configProperty.getProperty("USER");
+       // String pwd = configProperty.getProperty("PASS");
         String url = configProperty.getProperty("URL");
 
         driver.manage().window().maximize();
@@ -60,8 +59,8 @@ public class BaseTest {
 
         // ((HasAuthentication) driver).register(UsernameAndPassword.of(usr, pwd));
 
-        // driver.get("https://" + url);
-        driver.get("https://" + usr + ":" + pwd + "@" + url);
+        driver.get(url);
+        //driver.get("https://" + usr + ":" + pwd + "@" + url);
 
        // Wait.sleep(10);
 
