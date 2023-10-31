@@ -14,7 +14,7 @@ public class HomeTest {
 
     WebDriver driver;
 
-    @BeforeTest
+    @BeforeTest(alwaysRun = true)
     public void setup() {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
 
@@ -46,7 +46,7 @@ public class HomeTest {
 
     }
 
-    @AfterTest
+    @AfterTest(alwaysRun = true)
     public void tearDown() {
         try {
             this.driver.quit();
